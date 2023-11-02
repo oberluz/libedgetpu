@@ -159,6 +159,7 @@ DOCKER_IMAGE ?= debian:stretch
 DOCKER_TAG_BASE ?= libedgetpu-cross
 DOCKER_TAG := "$(DOCKER_TAG_BASE)-$(subst :,-,$(DOCKER_IMAGE))"
 DOCKER_SHELL_COMMAND ?=
+DOCKER_IMAGE_OPTIONS ?= "--progress=plain"
 
 DOCKER_MAKE_COMMAND := \
 for cpu in $(DOCKER_CPUS); do \
